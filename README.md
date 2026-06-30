@@ -1,36 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
-<body>
-
-# <i class="bi bi-shield-lock-fill" style="color:#2ecc71;"></i> Security System
-
-> **Lightweight anti‑abuse module for open.mp servers** – automatically detects and blocks suspicious connections.
-
-<p align="center">
-  <img src="https://img.shields.io/badge/open.mp-2.0.0+-blue?style=for-the-badge&logo=openmp" alt="open.mp">
-  <img src="https://img.shields.io/badge/Pawn-3.10.11+-orange?style=for-the-badge&logo=pawn" alt="Pawn">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge" alt="Status">
-</p>
+<div align="center">
+  <img src="https://img.icons8.com/fluency/96/000000/shield.png" alt="Logo" width="120" height="120"/>
+  <h1>🛡️ OMP-Security</h1>
+  <p><strong>Lightweight Anti‑Abuse Module for open.mp Servers</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/open.mp-2.0.0+-blue?style=for-the-badge&logo=openmp" alt="open.mp">
+    <img src="https://img.shields.io/badge/Pawn-3.10.11+-orange?style=for-the-badge&logo=pawn" alt="Pawn">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge" alt="Status">
+    <img src="https://img.shields.io/badge/Version-1.0.0-blueviolet?style=for-the-badge" alt="Version">
+  </p>
+</div>
 
 ---
 
-## <i class="bi bi-info-circle"></i> Overview
+## 📖 Overview
 
-This include integrates into your gamemode to perform a non‑intrusive risk assessment whenever a player connects. It queries the public IP‑API service (`ip-api.com`) to determine:
+**OMP-Security** is a robust, drop‑in security include for open.mp servers. It automatically detects and blocks suspicious connections based on:
 
-- <i class="bi bi-globe"></i> **Country** of the IP address
-- <i class="bi bi-shield-exclamation"></i> **Proxy** status (VPN, Tor, etc.)
-- <i class="bi bi-hdd-stack"></i> **Hosting** status (VPS, cloud provider)
+- **VPN / Proxy** usage
+- **Hosting / VPS** providers
+- **Geographic origin** (country)
+- **High ping** (latency)
 
-Combined with the player’s <i class="bi bi-speedometer2"></i> **ping**, it calculates a risk score. If the score exceeds the configured threshold, the player is automatically kicked with a clear message.
+Using a simple risk‑scoring system, it ensures that only legitimate players can join your server, protecting you from abuse, cheating, and DDoS attacks.
 
 ---
 
-## <i class="bi bi-stars"></i> Features
+## ✨ Features
 
 | Icon | Feature | Description |
 |------|---------|-------------|
@@ -45,13 +41,13 @@ Combined with the player’s <i class="bi bi-speedometer2"></i> **ping**, it cal
 
 ---
 
-## <i class="bi bi-download"></i> Installation
+## 📦 Installation
 
-### Step 1: Place the file
-Copy `security.inc` into your Pawn include directory (e.g., `pawno/include/`).
+### 1. Place the include
+Copy `omp-security.inc` into your Pawn include directory (e.g., `pawno/include/`).
 
-### Step 2: Include in your script
+### 2. Include in your script
 Add this line to your gamemode or filterscript:
 
 ```pawn
-#include <security>
+#include <omp-security>
