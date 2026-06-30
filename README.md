@@ -44,7 +44,7 @@ Using a simple risk‑scoring system, it ensures that only legitimate players ca
 ## 📦 Installation
 
 ### 1. Place the include
-Copy `omp-security.inc` into your Pawn include directory (e.g., `pawno/include/`).
+Copy `omp-security.inc` into your Pawn include directory (e.g., `qawno/include/`).
 
 ### 2. Include in your script
 Add this line to your gamemode or filterscript:
